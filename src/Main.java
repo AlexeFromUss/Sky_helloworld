@@ -11,7 +11,7 @@ public class Main {
         String shortIntegerCh = "shortInteger";
         long longInteger = 100500L;
         String longIntegerCh = "longInteger";
-        float notInteger = 3.5f;
+        float notInteger = 3.5F;
         String notIntegerCh = "notInteger";
         double bigNotInteger = 300.12345678;
         String bigNotIntegerCh = "bigNotInteger";
@@ -24,12 +24,11 @@ public class Main {
         System.out.println("Значение переменной " + bigNotIntegerCh + " с типом double равно " + bigNotInteger);
 
         //Zadacha 2
-        float firts = 27.12f;
+        float firts = 27.12F;
         System.out.println(firts);
         long second = 987678965549L;
         System.out.println(second);
-        String third = "2,786";
-        //String был выбран, только потому, что в уроке говорилось, что дробная часть числа может быть отделена ТОЛЬКО точкой. Иначе был бы float
+        float third = 2.786F;
         System.out.println(third);
         short fourth = 569;
         System.out.println(fourth);
@@ -65,7 +64,7 @@ public class Main {
         int classes = bankas / (whitePerClass + brounePerClass);
         int allWhite = classes * whitePerClass;
         int allBroune = classes * brounePerClass;
-        System.out.println("В школе, где " + classes + " классов, нужно " + allWhite +" банок белой краски и " + allBroune + " банок коричневой краски");
+        System.out.println("В школе, где " + classes + " классов, нужно " + allWhite + " банок белой краски и " + allBroune + " банок коричневой краски");
 
 
         //Zadacha 6
@@ -105,10 +104,9 @@ public class Main {
         //int kristinaNew = kristinaBase * 1.1; могло бы быть так, но не хочу появления double в этой части кода
         int kristinaNew = kristinaBase + (kristinaBase / 10);
 
-        System.out.println("Маша теперь получает " + mashaNew + " рублей. Годовой доход вырос на " + ((mashaNew * 12) - (mashaBase * 12)) +" рублей");
-        System.out.println("Денис теперь получает " + denisNew + " рублей. Годовой доход вырос на " + ((denisNew * 12) - (denisBase * 12)) +" рублей");
-        System.out.println("Кристина теперь получает " + kristinaNew + " рублей. Годовой доход вырос на " + ((kristinaNew * 12) - (kristinaBase * 12)) +" рублей");
-
+        System.out.println("Маша теперь получает " + mashaNew + " рублей. Годовой доход вырос на " + ((mashaNew * 12) - (mashaBase * 12)) + " рублей");
+        System.out.println("Денис теперь получает " + denisNew + " рублей. Годовой доход вырос на " + ((denisNew * 12) - (denisBase * 12)) + " рублей");
+        System.out.println("Кристина теперь получает " + kristinaNew + " рублей. Годовой доход вырос на " + ((kristinaNew * 12) - (kristinaBase * 12)) + " рублей");
 
 
     }
