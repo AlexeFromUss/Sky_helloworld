@@ -25,13 +25,21 @@ public class Main {
 
         //Zadacha 2
         float firts = 27.12f;
+        System.out.println(firts);
         long second = 987678965549L;
+        System.out.println(second);
         String third = "2,786";
         //String был выбран, только потому, что в уроке говорилось, что дробная часть числа может быть отделена ТОЛЬКО точкой. Иначе был бы float
+        System.out.println(third);
         short fourth = 569;
+        System.out.println(fourth);
         short fifth = -159;
+        System.out.println(fifth);
         short sixth = 27897;
+        System.out.println(sixth);
         byte seventh = 67;
+        System.out.println(seventh);
+
 
         //Zadacha 3
         byte lyudmilaPavlovna = 23;
