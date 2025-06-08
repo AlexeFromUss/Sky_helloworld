@@ -3,92 +3,58 @@
 public class Main {
     public static void main(String[] args) {
         //Zadacha 1
-        byte clientOS = 0; //0 — iOS, 1 — Android
-        if (clientOS == 0) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 1){
-            System.out.println("Установите версию приложения для Android по ссылке");
-        } else {
-            System.out.println("Неизвестная ОС");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
         }
 
         //Zadacha 2
-        int yearOfRelease = 2014;
-        if (clientOS == 0) {
-            if (yearOfRelease < 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            }
-        }
-        if (clientOS == 1) {
-            if (yearOfRelease < 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+        for (int i = 10; i > 0; i--) {
+            System.out.println(i);
         }
 
         //Zadacha 3
-        int startVisokostniyYear = 1584;
-        int checkYear = 2384;
-        int difference = checkYear - startVisokostniyYear;
-        boolean everFour = difference % 4 == 0;
-        boolean EverHundred = difference % 100 == 0;
-        boolean everFourHundred = difference % 400 == 0;
-
-        if (everFourHundred) {
-            System.out.println("Год высокосный");
-        } else if (everFour && !EverHundred) {
-            System.out.println("Год высокосный");
-        } else {
-            System.out.println("Год не высокосный");
+        for (int i = 2; i < 17; i = i + 2) {
+            System.out.println(i);
         }
 
         //Zadacha 4
-        int deliveryDistance  = 95;
-
-        if (deliveryDistance <= 20) {
-            System.out.println("Потребуется 1 день");
-        } else if (deliveryDistance <= 60) {
-            System.out.println("Потребуется дней: 2");
-        } else if (deliveryDistance <= 100) {
-            System.out.println("Потребуется дней: 3");
-        } else {
-            System.out.println("Доставки нет");
+        for (int i = 10; i >=-10; i--) {
+            System.out.println(i);
         }
-
 
         //Zadacha 5
-        byte monthNumber = 12;
-
-        switch (monthNumber) {
-            case 12:
-            case 1:
-            case 2:
-                System.out.println("Зима");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                System.out.println("Весна");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Лето");
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Осень");
-            default:
-                System.out.println("Такого месяца не существует");
+        for (int i = 1904; i <= 2096; i = i + 4) {
+            System.out.println(i + " год является високосным");
         }
 
+        //Zadacha 6
+        for (int i = 7; i <= 98; i = i + 7) {
+            System.out.println(i);
+        }
 
+        //Zadacha 7
+        for (int i = 1; i <= 512; i = i * 2) {
+            System.out.println(i);
+        }
 
+        //Zadacha 8
+        int savings = 0;
+        for (int month = 1; month <= 12; month++) {
+            savings = savings + 29000;
+            System.out.println("Сумма " + month + ", сумма накоплений равна " + savings + " рублей.");
+        }
 
+        //Zadacha 9
+        int savingsInBank = 0;
+        for (int month = 1; month <= 12; month++) {
+            savingsInBank = savingsInBank + 29000 + (savingsInBank/100);
+            System.out.println("Сумма " + month + ", сумма накоплений c процентами равна " + savingsInBank + " рублей.");
+        }
 
+        //Zadacha 10
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("2*"+ i +"="+(2*i));
+        }
 
 
     }
