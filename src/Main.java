@@ -29,12 +29,12 @@ public class Main {
         int startVisokostniyYear = 1584;
         int year = 2100;
         boolean everFour = year % 4 == 0;
-        boolean EverHundred = year % 100 == 0;
+        boolean everHundred = year % 100 == 0;
         boolean everFourHundred = year % 400 == 0;
 
         if (everFourHundred && year>=startVisokostniyYear) {
             System.out.println("Год высокосный");
-        } else if (everFour && !EverHundred && year>=startVisokostniyYear) {
+        } else if (everFour && !everHundred && year>=startVisokostniyYear) {
             System.out.println("Год высокосный");
         } else {
             System.out.println("Год не высокосный");
@@ -55,39 +55,16 @@ public class Main {
 
 
         //Zadacha 5
-        byte monthNumber = 13;
-        if (monthNumber > 12){
-            System.out.println("Нет такого месяца (if-else)");
-        } else {
+        byte monthNumber = 12;
+
             switch (monthNumber) {
-                case 12:
-                case 1:
-                case 2:
-                    System.out.println("Зима");
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    System.out.println("Весна");
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    System.out.println("Лето");
-                case 9:
-                case 10:
-                case 11:
-                    System.out.println("Осень");
+                case 12, 1, 2: System.out.println("Зима"); break;
+                case 3, 4, 5: System.out.println("Весна"); break;
+                case 6, 7, 8: System.out.println("Лето"); break;
+                case 9, 10, 11: System.out.println("Осень"); break;
                 default:
                     System.out.println("Такого месяца не существует");
-            }
         }
-
-
-
-
-
-
 
     }
 }
