@@ -6,6 +6,7 @@ public class Main {
         int savings = 0;
         int month = 0;
         while (savings < 2_459_000) {
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + savings + " рублей.");
             month++;
             savings += 15000;
         }
@@ -75,14 +76,11 @@ public class Main {
         int lastTwoHundredYears = thisYear - 200;
         int nextHundredYears = thisYear + 100;
         int checkYear = 0; //комета пролетает каждый 79-й год, *начиная с нулевого*.
-        while (checkYear < nextHundredYears) { //делаю через while потому, что это тема урока. удобнее было бы использовать for
-            if (checkYear >= lastTwoHundredYears && checkYear < thisYear) {
-                System.out.println(checkYear);
-            } else if (checkYear >= thisYear) {
+        while (checkYear <= nextHundredYears) { //делаю через while потому, что это тема урока. удобнее было бы использовать for
+            if (checkYear >= lastTwoHundredYears) {
                 System.out.println(checkYear);
             }
             checkYear += 79;
-
         }
 
 
