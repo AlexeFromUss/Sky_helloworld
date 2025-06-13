@@ -3,58 +3,94 @@
 public class Main {
     public static void main(String[] args) {
         //Zadacha 1
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
+        int savings = 0;
+        int month = 0;
+        while (savings < 2_459_000) {
+            month++;
+            savings += 15000;
         }
+        System.out.println("Месяц " + month + ", сумма накоплений равна " + savings + " рублей.");
 
         //Zadacha 2
-        for (int i = 10; i > 0; i--) {
-            System.out.println(i);
+        int i = 0;
+        while (i < 10) {
+            i++;
+            System.out.print(i + " ");
         }
+        System.out.println();
+        for (; i >0; i--) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
 
         //Zadacha 3
-        for (int i = 2; i < 17; i = i + 2) {
-            System.out.println(i);
+        int population = 12_000_000;
+        int birthRate = 17;
+        int mortalityRate =8;
+        int  year = 1;
+        while (year <= 10) {
+            population += ((birthRate - mortalityRate) * (population / 1000));
+            System.out.println("Год " + year + ", численность населения составляет " + population);
+            year++;
         }
 
         //Zadacha 4
-        for (int i = 10; i >=-10; i--) {
-            System.out.println(i);
+        int savingsInBank = 15000;
+        month = 1;
+        while (savingsInBank < 12_000_000) {
+            //savingsInBank = savingsInBank * 1.07; требуется изменить тип переменной на double
+            savingsInBank += (savingsInBank / 100 * 7); // не требуется изменения типа. Разница по памяти 32bit, т.е. 2 раза
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + savingsInBank + " рублей.");
+            month++;
         }
 
         //Zadacha 5
-        for (int i = 1904; i <= 2096; i = i + 4) {
-            System.out.println(i + " год является високосным");
+        savingsInBank = 15000;
+        month = 1;
+        while (savingsInBank < 12_000_000) {
+            savingsInBank += (savingsInBank / 100 * 7);
+            if (month % 6 == 0) {System.out.println("Месяц " + month + ", сумма накоплений равна " + savingsInBank + " рублей.");}
+            month++;
         }
 
+
         //Zadacha 6
-        for (int i = 7; i <= 98; i = i + 7) {
-            System.out.println(i);
+        savingsInBank = 15000;
+        month = 1;
+        while (month <= (12 * 9)) {
+            savingsInBank +=  (savingsInBank / 100 * 7);
+            if (month % 6 == 0) {System.out.println("Месяц " + month + ", сумма накоплений равна " + savingsInBank + " рублей.");}
+            month++;
         }
 
         //Zadacha 7
-        for (int i = 1; i <= 512; i = i * 2) {
-            System.out.println(i);
+        int friday = 4; // указываем число первой пятницы
+        while (friday <= 31) { // в нашем месяце строго 31 день
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет" );
+            friday = friday + 7;
         }
 
         //Zadacha 8
-        int savings = 0;
-        for (int month = 1; month <= 12; month++) {
-            savings = savings + 29000;
-            System.out.println("Сумма " + month + ", сумма накоплений равна " + savings + " рублей.");
+        int thisYear = 2025;
+        int lastTwoHundredYears = thisYear - 200;
+        int nextHundredYears = thisYear + 100;
+        int checkYear = 0; //комета пролетает каждый 79-й год, *начиная с нулевого*.
+        while (checkYear < nextHundredYears) { //делаю через while потому, что это тема урока. удобнее было бы использовать for
+            if (checkYear >= lastTwoHundredYears && checkYear < thisYear) {
+                System.out.println(checkYear);
+            } else if (checkYear >= thisYear) {
+                System.out.println(checkYear);
+            }
+            checkYear += 79;
+
         }
 
-        //Zadacha 9
-        int savingsInBank = 0;
-        for (int month = 1; month <= 12; month++) {
-            savingsInBank = savingsInBank + 29000 + (savingsInBank/100);
-            System.out.println("Сумма " + month + ", сумма накоплений c процентами равна " + savingsInBank + " рублей.");
-        }
 
-        //Zadacha 10
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("2*"+ i +"="+(2*i));
-        }
+
+
+
+
+
 
 
     }
