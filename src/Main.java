@@ -1,73 +1,52 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         //Zadacha 1
-        int [] arrayOne = new int [3];
-        arrayOne[0] = 1;
-        arrayOne[1] = 2;
-        arrayOne[2] = 3;
-
-        double [] arrayTwo = {1.57, 7.654, 9.986};
-        short [] adress = {192, 168, 1, 1};
+        System.out.println("Задача 1");
+        int [] zatratsWeek = {30, 50000, 6000, 4286, 5};
+        int sum = 0;
+        for (int j : zatratsWeek) {
+            sum += j;
+        }
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
         //Zadacha 2
-        for (int i = 0; i < arrayOne.length; i++) {
-            System.out.print(arrayOne[i] );
-            if (i < arrayOne.length-1) {
-                System.out.print(", ");
+        System.out.println();
+        System.out.println("Задача 2");
+        int [] zatratsWeekTwo = {30, 50000, 6000, 4286, 5};
+        int max = zatratsWeekTwo[0];
+        int min = zatratsWeekTwo[0];
+        for (int i = 0; i < zatratsWeekTwo.length; i++) {
+            if (zatratsWeekTwo[i] > max) {
+                max = zatratsWeekTwo[i];
+            }
+            if (zatratsWeekTwo[i] < min) {
+                min = zatratsWeekTwo[i];
             }
         }
-        System.out.println();
-        for (int i = 0; i < arrayTwo.length; i++) {
-            System.out.print(arrayTwo[i]);
-            if (i < arrayTwo.length-1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-
-        for (int i = 0; i < adress.length; i++) {
-            System.out.print(adress[i]);
-            if (i < adress.length-1) {
-                System.out.print(",");
-            }
-        }
-        System.out.println();
+        System.out.println("Минимальная сумма трат за неделю составила " + min + " рублей. Максимальная сумма трат за неделю составила " + max + " рублей");
 
         //Zadacha 3
-        for (int i = arrayOne.length-1; i >= 0; i--) {
-            System.out.print(arrayOne[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
         System.out.println();
+        System.out.println("Задача 3");
+        int [] zatratsWeekTree = {30, 50000, 6000, 4286, 5};
+        int maxTree = 0;
+        for (int j : zatratsWeekTree) {
+            maxTree += j;
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + (maxTree / zatratsWeekTree.length) + " рублей");
 
-        for (int i = arrayTwo.length-1; i >= 0; i--) {
-            System.out.print(arrayTwo[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-
-        for (int i = adress.length-1; i >= 0; i--) {
-            System.out.print(adress[i]);
-            if (i > 0) {
-                System.out.print(",");
-            }
-        }
-        System.out.println();
 
         //Zadacha 4
-        for (int i = 0; i < arrayOne.length; i++) {
-            if (arrayOne[i] % 2 != 0) {
-                arrayOne[i]++;
-            }
+        System.out.println();
+        System.out.println("Задача 4");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char tempChar;
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            tempChar = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length-1-i];
+            reverseFullName[reverseFullName.length-1-i] = tempChar;
         }
-        System.out.println(Arrays.toString(arrayOne));
-
+        System.out.println(reverseFullName);
 
 
     }
